@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
@@ -40,53 +41,13 @@ public class InputManager : MonoBehaviour
     public static bool m_player2ModeChange;
     public static bool m_player2Menu;
 
-    public static Vector2 m_player1Input
+    public static Vector2 m_player1Input { get; private set; }
+   
+    public static Vector2 m_player2Input { get; private set; }
+
+    private void Start()
     {
-        get
-        {
-            Vector2 input = Vector2.zero;
-            if (m_upButton)
-            {
-                input += Vector2.up;
-            }
-            if (m_downButton)
-            {
-                input += Vector2.down;
-            }
-            if (m_rightButton)
-            {
-                input += Vector2.right;
-            }
-            if (m_leftButton)
-            {
-                input += Vector2.left;
-            }
-            return input;
-        }
-    }
-    public static Vector2 m_player2Input
-    {
-        get
-        {
-            Vector2 input = Vector2.zero;
-            if (m_upButton2)
-            {
-                input += Vector2.up;
-            }
-            if (m_downButton2)
-            {
-                input += Vector2.down;
-            }
-            if (m_rightButton2)
-            {
-                input += Vector2.right;
-            }
-            if (m_leftButton2)
-            {
-                input += Vector2.left;
-            }
-            return input;
-        }
+        DontDestroyOnLoad(gameObject.transform.parent.gameObject);
     }
 
     void Update()
@@ -244,5 +205,68 @@ public class InputManager : MonoBehaviour
             m_leftButton2 = false;
             m_leftButtonDownLock2 = false;
         }
+
     }
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        m_player1Input = context.ReadValue<Vector2>();
+    }
+
+    public void OnFire(InputAction.CallbackContext context)
+    {
+        m_player1Shoot1 = context.started;
+        if(context.canceled)
+        {
+            m_player1Shoot1 = false;
+        }
+    }
+    public void OnFire2(InputAction.CallbackContext context)
+    {
+        m_player1Shoot2 = context.started;
+        if (context.canceled)
+        {
+            m_player1Shoot2 = false;
+        }
+    }
+
+    public void OnModeChange(InputAction.CallbackContext context)
+    {
+        m_player1ModeChange = context.started;
+        if(context.canceled)
+        {
+            m_player1ModeChange = false;
+        }
+    }
+
+    public void OnPlayer2Move(InputAction.CallbackContext context)
+    {
+        m_player2Input = context.ReadValue<Vector2>();
+    }
+
+    public void OnPlayer2Fire(InputAction.CallbackContext context)
+    {
+        m_player2Shoot1 = context.started;
+        if (context.canceled)
+        {
+            m_player2Shoot1 = false;
+        }
+    }
+    public void OnPlayer2Fire2(InputAction.CallbackContext context)
+    {
+        m_player2Shoot2 = context.started;
+        if (context.canceled)
+        {
+            m_player2Shoot2 = false;
+        }
+    }
+
+    public void OnPlayer2ModeChange(InputAction.CallbackContext context)
+    {
+        m_player2ModeChange = context.started;
+        if (context.canceled)
+        {
+            m_player2ModeChange = false;
+        }
+    }
+
 }

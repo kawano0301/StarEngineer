@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 public class ModeSelectManager : MonoBehaviour
 {
-    void Start()
+    public void OnStart()
     {
+        SceneManager.LoadScene("EquipmentSelect");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnCustom()
     {
-        
+        SceneManager.LoadScene("Custom");
+    }
+
+    public void OnExplanation()
+    {
+        SceneManager.LoadScene("Custom");
     }
 }
