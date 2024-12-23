@@ -12,20 +12,20 @@ public class GameManager : MonoBehaviour
 
     const string INPUT_OBJECT_NAME = "InputParent";
     const string SOUND_OBJECT_NAME = "SoundManage";
-    const string GAME_MANAGER_OBJECT = "GameManager";
+    const string GAME_MANAGER_OBJECT = "GameManage";
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void PlayStart()
     {
-        GameObject gameobject = Resources.Load(INPUT_OBJECT_NAME) as GameObject;
+        GameObject gameobject = Resources.Load(GAME_MANAGER_OBJECT) as GameObject;
         m_gameManager = Instantiate(gameobject);
         gameobject.name = GAME_MANAGER_OBJECT;
 
-        m_inputPrefab = Resources.Load(INPUT_OBJECT_NAME) as GameObject;
-        m_soundManage = Resources.Load(SOUND_OBJECT_NAME) as GameObject;
+        GameObject game = Resources.Load(INPUT_OBJECT_NAME) as GameObject;
+        GameObject game2 = Resources.Load(SOUND_OBJECT_NAME) as GameObject;
 
-        m_inputPrefab = Instantiate(m_inputPrefab);
-        m_soundManage = Instantiate(m_soundManage);
+        m_inputPrefab = Instantiate(game);
+        m_soundManage = Instantiate(game2);
     }
 
     private void Start()
