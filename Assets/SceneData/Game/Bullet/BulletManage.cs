@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Game.Player;
 /// <summary>
 /// ‹Ê‚ÌŠÇ—ƒNƒ‰ƒX
 /// </summary>
