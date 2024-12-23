@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Game.Player.Status;
+using UnityEngine.InputSystem;
 
 namespace Game.Player
 {
@@ -26,7 +27,6 @@ namespace Game.Player
         SpriteRenderer m_planetSprite;
 
         Vector2 m_velocity;
-
 
         const float SCREEN_WIDTH = 8.60f;
         const float SCREEN_HEIGHT = 4.70f;

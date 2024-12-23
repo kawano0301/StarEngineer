@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Move2",
+                    "type": "Value",
+                    "id": "c703abaa-f178-4a4b-a486-b71d1ea2225b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -174,6 +183,61 @@
                     "action": "Fire1",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "ArrowWASD",
+                    "id": "6ce382c9-b548-49bc-9d66-6deac1196b32",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move2",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8e63f200-3d84-4b87-9048-07f4fc32ea04",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "5030f4cd-be0f-4999-ab8d-ec793e904b71",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "6a7bbece-70d1-4927-9ec7-2854f85056db",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6b9669f2-d6e7-43d3-96de-e0bbd6562996",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -236,7 +300,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Key&Mouse2",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -247,7 +311,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Key&Mouse2",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -258,7 +322,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Key&Mouse2",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -269,7 +333,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Key&Mouse2",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -280,7 +344,7 @@
                     "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad2",
+                    "groups": "Joystick",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -302,7 +366,7 @@
                     "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad2",
+                    "groups": "Key&Mouse2",
                     "action": "Fire2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -313,7 +377,7 @@
                     "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Key&Mouse2",
                     "action": "ModeChange",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -346,7 +410,7 @@
                     "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad2",
+                    "groups": "Key&Mouse2",
                     "action": "Fire1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -934,6 +998,11 @@
         {
             "name": "Gamepad2",
             "bindingGroup": "Gamepad2",
+            "devices": []
+        },
+        {
+            "name": "Key&Mouse2",
+            "bindingGroup": "Key&Mouse2",
             "devices": []
         }
     ]
