@@ -12,8 +12,8 @@ public class PlayerGenerator : MonoBehaviour
 
     void Start()
     {
-        GeneratePlayer(m_playerScript.s_player[0], Player.PlayerKind.Player1);
-        GeneratePlayer(m_playerScript.s_player[0], Player.PlayerKind.Player2);
+        InstancePlayer(m_playerScript.s_player[0], Player.PlayerKind.Player1);
+        InstancePlayer(m_playerScript.s_player[0], Player.PlayerKind.Player2);
     }
 
 
@@ -22,7 +22,7 @@ public class PlayerGenerator : MonoBehaviour
 
     }
 
-    void GeneratePlayer(PlayerStatus playerStatus,Player.PlayerKind player)
+    void InstancePlayer(PlayerStatus playerStatus,Player.PlayerKind player)
     {
         GameObject instance = Instantiate(m_player);
         instance.GetComponent<Player>().Initialize(playerStatus, player);
