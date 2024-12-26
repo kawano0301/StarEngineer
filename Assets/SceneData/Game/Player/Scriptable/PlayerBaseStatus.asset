@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerBaseStatus
   m_EditorClassIdentifier: 
   s_player:
-  - m_planet: 0
-    m_maxHP: 1
+  - m_maxHP: 1
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
     m_attackScale: 1
-    m_sprite: {fileID: -1103501724, guid: d28f942751a9312478536261e3848bae, type: 3}
+    m_planet: 3
+    m_sprite: {fileID: 1343196295, guid: d28f942751a9312478536261e3848bae, type: 3}
     m_collisionRadius: 0.32

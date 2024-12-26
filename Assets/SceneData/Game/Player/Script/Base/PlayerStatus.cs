@@ -23,12 +23,12 @@ namespace Game.Player.Status
             PLUTO,//ñªâ§êØ
         }
 
-        public PlanetKind m_planet;
         public int m_maxHP;
         public int m_hp;
         public float m_maxSpeed;
         public float m_speedScale;
         public float m_attackScale;
+        public PlanetKind m_planet;
         public Sprite m_sprite;
         public float m_collisionRadius;
 

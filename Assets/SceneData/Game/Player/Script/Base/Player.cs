@@ -10,6 +10,16 @@ namespace Game.Player
 
     public class Player : MonoBehaviour
     {
+        PlayerStatus m_baseStatus;
+
+        PlayerStatus.PlanetKind m_planetNumber;
+        int m_hp = 0;
+        float m_speedScale = 1;
+        float m_attackScale = 1;
+
+        Vector2 m_velocity;
+
+        //惑星番号
         PlayerKind m_player;
         public enum PlayerKind
         {
@@ -18,30 +28,23 @@ namespace Game.Player
             Player2
         }
 
-        PlayerStatus m_baseStatus;
-
-        PlayerStatus.PlanetKind m_planetNumber;
-        int m_hp = 0;
-        float m_speedScale = 1;
-        float m_attackScale = 1;
-        SpriteRenderer m_planetSprite;
-
-        Vector2 m_velocity;
-
+        //画面外範囲と反射力
         const float SCREEN_WIDTH = 8.60f;
         const float SCREEN_HEIGHT = 4.70f;
+        const float REBOUND_POWER = 20.0f;
+
 
         public void Initialize(PlayerStatus playerStatus, PlayerKind player)
         {
             m_player = player;
             m_baseStatus = playerStatus;
-            m_planetNumber = playerStatus.m_planet;
             m_hp = playerStatus.m_hp;
             m_speedScale = playerStatus.m_speedScale;
             m_attackScale = playerStatus.m_attackScale;
-            m_planetSprite = GetComponent<SpriteRenderer>();
-            m_planetSprite.sprite = playerStatus.m_sprite;
-            //GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
+
+            m_planetNumber = playerStatus.m_planet;
+            GetComponent<SpriteRenderer>().sprite = playerStatus.m_sprite;
+            GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
         }
 
 
@@ -50,7 +53,7 @@ namespace Game.Player
             switch (m_player)
             {
                 case PlayerKind.NoPlayer:
-                    Debug.LogError("adderror");
+                    Debug.LogError("NoControlPlayer");
                     break;
                 case PlayerKind.Player1:
                     Player1Update();
@@ -59,20 +62,31 @@ namespace Game.Player
                     Player2Update();
                     break;
             }
+
+            if(InputManager.m_player1Shoot1)
+            {
+                Debug.Log("1");
+            }
+
+            if (InputManager.m_player1Shoot2)
+            {
+                Debug.Log("2");
+            }
+
         }
 
         void Player1Update()
         {
             SetMovePower(InputManager.m_player1Input);
             MoveUpdate();
-            ScreenOutCheck();
+            BoundOverScreen();
         }
 
         void Player2Update()
         {
             SetMovePower(InputManager.m_player2Input);
             MoveUpdate();
-            ScreenOutCheck();
+            BoundOverScreen();
         }
 
         /// <summary>
@@ -81,6 +95,7 @@ namespace Game.Player
         /// <param name="movePower">移動値</param>
         public void SetMovePower(Vector2 movePower)
         {
+            //上限の確認
             if (Mathf.Abs(m_velocity.x) > m_baseStatus.m_maxSpeed) return;
             if (Mathf.Abs(m_velocity.y) > m_baseStatus.m_maxSpeed) return;
 
@@ -100,18 +115,29 @@ namespace Game.Player
         }
 
         /// <summary>
-        /// 画面外移動時に戻す動作
+        /// 画面に跳ね返す移動動作
         /// </summary>
-        void ScreenOutCheck()
+        void BoundOverScreen()
         {
             //右
-            if (SCREEN_WIDTH < transform.position.x) { m_velocity.x = -10f; }
+            if (SCREEN_WIDTH < transform.position.x) { m_velocity.x = -REBOUND_POWER; }
             //上
-            if (SCREEN_HEIGHT < transform.position.y) { m_velocity.y = -10f; }
+            if (SCREEN_HEIGHT < transform.position.y) { m_velocity.y = -REBOUND_POWER; }
             //左
-            if (transform.position.x < -SCREEN_WIDTH) { m_velocity.x = 10f; }
+            if (transform.position.x < -SCREEN_WIDTH) { m_velocity.x = REBOUND_POWER; }
             //下
-            if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = 10f; }
+            if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
+        }
+
+
+        void Attack1()
+        {
+
+        }
+
+        void Attack2()
+        {
+
         }
 
         //ダメージセット
