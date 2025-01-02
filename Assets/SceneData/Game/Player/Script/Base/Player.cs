@@ -20,7 +20,7 @@ namespace Game.Player
         Vector2 m_velocity;
 
         //惑星番号
-        PlayerKind m_player;
+        PlayerKind m_playerKind;
         public enum PlayerKind
         {
             NoPlayer,
@@ -34,9 +34,9 @@ namespace Game.Player
         const float REBOUND_POWER = 20.0f;
 
 
-        public void Initialize(PlayerStatus playerStatus, PlayerKind player)
+        public void Initialize(PlayerStatus playerStatus, PlayerKind playerKind)
         {
-            m_player = player;
+            m_playerKind = playerKind;
             m_baseStatus = playerStatus;
             m_hp = playerStatus.m_hp;
             m_speedScale = playerStatus.m_speedScale;
@@ -50,7 +50,7 @@ namespace Game.Player
 
         void Update()
         {
-            switch (m_player)
+            switch (m_playerKind)
             {
                 case PlayerKind.NoPlayer:
                     Debug.LogError("NoControlPlayer");
@@ -63,7 +63,15 @@ namespace Game.Player
                     break;
             }
 
-            if(InputManager.m_player1Shoot1)
+        }
+
+        void Player1Update()
+        {
+            SetMovePower(InputManager.m_player1Input);
+            MoveUpdate();
+            BoundOverScreen();
+
+            if (InputManager.m_player1Shoot1)
             {
                 Debug.Log("1");
             }
@@ -72,14 +80,6 @@ namespace Game.Player
             {
                 Debug.Log("2");
             }
-
-        }
-
-        void Player1Update()
-        {
-            SetMovePower(InputManager.m_player1Input);
-            MoveUpdate();
-            BoundOverScreen();
         }
 
         void Player2Update()
@@ -87,6 +87,16 @@ namespace Game.Player
             SetMovePower(InputManager.m_player2Input);
             MoveUpdate();
             BoundOverScreen();
+
+            if (InputManager.m_player2Shoot1)
+            {
+                Debug.Log("1");
+            }
+
+            if (InputManager.m_player2Shoot2)
+            {
+                Debug.Log("2");
+            }
         }
 
         /// <summary>
@@ -129,16 +139,6 @@ namespace Game.Player
             if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
         }
 
-
-        void Attack1()
-        {
-
-        }
-
-        void Attack2()
-        {
-
-        }
 
         //ダメージセット
         public void SetDamage(int damageValue) { m_baseStatus.m_hp -= damageValue; }
