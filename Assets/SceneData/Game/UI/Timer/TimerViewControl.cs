@@ -41,7 +41,7 @@ public class TimerViewControl : MonoBehaviour
         int oneDigits = (int)timer - twoDigits * 10;
 
         //テキストに導入(UIタイマー操作)
-        m_timerText.text = "<sprite=" + twoDigits + ">" +
-                           "<sprite=" + oneDigits + ">";
+        m_timerText.SetText("<sprite=" + twoDigits + ">" +
+                           "<sprite=" + oneDigits + ">");
     }
 }
