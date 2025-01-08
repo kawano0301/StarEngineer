@@ -38,6 +38,20 @@ public class WindowManager : MonoBehaviour
             m_leftWindow.transform.DOLocalMove(OPEN_DOOR_LEFT, OPEN_TIME);
         });
     }
+    public void CloseToOpenResetCallBack()
+    {
+        m_rightWindow.transform.DOLocalMove(CLOSED_DOOR_RIGHT, CLOSED_TIME);
+        m_leftWindow.transform.DOLocalMove(CLOSED_DOOR_LEFT, CLOSED_TIME).OnComplete(() =>
+        {
+            if (m_onClosed != null)
+            {
+                m_onClosed();
+                m_onClosed = null;
+            }
+            m_rightWindow.transform.DOLocalMove(OPEN_DOOR_RIGHT, OPEN_TIME);
+            m_leftWindow.transform.DOLocalMove(OPEN_DOOR_LEFT, OPEN_TIME);
+        });
+    }
 
     public void Close()
     {
