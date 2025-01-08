@@ -6,14 +6,9 @@ public class WeaponStatus
 {
 
 
-    public enum WeaponType
-        {
-        None,
-    }
-
-    public WeaponType m_weapon;
+    public string Name;
     public int m_attackPower;
-
+    public float m_coolingTime;
 
 
 }
