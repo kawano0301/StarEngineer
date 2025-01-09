@@ -13,6 +13,8 @@ public class ImageColorGradation : MonoBehaviour
     float m_angle;
     int m_alphaBetween;
 
+    public bool m_stop;
+
     void Start()
     {
         m_image = GetComponent<Image>();
@@ -24,6 +26,7 @@ public class ImageColorGradation : MonoBehaviour
 
     void Update()
     {
+        if (m_stop) return;
         m_angle += m_anglePower * Time.deltaTime;
         float work = Mathf.Sin(m_angle);
 
