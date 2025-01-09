@@ -19,5 +19,6 @@ MonoBehaviour:
     m_speedScale: 1
     m_attackScale: 1
     m_planet: 3
-    m_sprite: {fileID: 1343196295, guid: d28f942751a9312478536261e3848bae, type: 3}
+    m_playerSprite: {fileID: 997103628, guid: d28f942751a9312478536261e3848bae, type: 3}
+    m_iconSprite: {fileID: 0}
     m_collisionRadius: 0.32

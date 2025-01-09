@@ -6,24 +6,18 @@ using UnityEngine;
 namespace Game.Weapon
 {
 
-    public class WeaponBase
+    public class Weapon_08_Boomerang : WeaponBase
     {
         WeaponStatus m_baseStatus;
 
 
-        void Initialize()
+        public override void Start(Player.Player player)
         {
 
         }
 
 
-        public virtual void Start(Player.Player player)
-        {
-
-        }
-
-
-        public virtual void Update(Player.Player player)
+        public override void Update(Player.Player player)
         {
             
         }

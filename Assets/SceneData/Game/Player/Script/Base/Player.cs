@@ -12,14 +12,13 @@ namespace Game.Player
     {
         PlayerStatus m_baseStatus;
 
-        PlayerStatus.PlanetKind m_planetNumber;
-        int m_hp = 0;
-        float m_speedScale = 1;
-        float m_attackScale = 1;
-
+        //移動量
         Vector2 m_velocity;
 
-        //惑星番号
+        //相手の情報
+        Player m_enemyPlayer;
+
+        //プレイヤー番号
         PlayerKind m_playerKind;
         public enum PlayerKind
         {
@@ -33,8 +32,13 @@ namespace Game.Player
         const float SCREEN_HEIGHT = 4.70f;
         const float REBOUND_POWER = 20.0f;
 
+        //ステータス
+        int m_hp = 0;
+        float m_speedScale = 1;
+        float m_attackScale = 1;
 
-        public void Initialize(PlayerStatus playerStatus, PlayerKind playerKind)
+
+        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus)
         {
             m_playerKind = playerKind;
             m_baseStatus = playerStatus;
@@ -42,10 +46,11 @@ namespace Game.Player
             m_speedScale = playerStatus.m_speedScale;
             m_attackScale = playerStatus.m_attackScale;
 
-            m_planetNumber = playerStatus.m_planet;
-            GetComponent<SpriteRenderer>().sprite = playerStatus.m_sprite;
+            GetComponent<SpriteRenderer>().sprite = playerStatus.m_playerSprite;
             GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
         }
+
+        public void SetEnemyPlayer(Player enemyPlayer) { m_enemyPlayer = enemyPlayer; }
 
 
         void Update()
@@ -71,15 +76,14 @@ namespace Game.Player
             MoveUpdate();
             BoundOverScreen();
 
-            if (InputManager.m_player1Shoot1)
-            {
-                Debug.Log("1");
-            }
+            if (InputManager.m_player1Shoot1) { Debug.Log("1"); }
 
-            if (InputManager.m_player1Shoot2)
-            {
-                Debug.Log("2");
-            }
+            if (InputManager.m_player1Shoot2) { Debug.Log("2"); }
+            SetDamage(1);
+
+
+            Debug.Log(m_hp);
+            Debug.Log(m_enemyPlayer.m_hp);
         }
 
         void Player2Update()
@@ -88,15 +92,11 @@ namespace Game.Player
             MoveUpdate();
             BoundOverScreen();
 
-            if (InputManager.m_player2Shoot1)
-            {
-                Debug.Log("1");
-            }
+            if (InputManager.m_player2Shoot1) { }
 
-            if (InputManager.m_player2Shoot2)
-            {
-                Debug.Log("2");
-            }
+            if (InputManager.m_player2Shoot2) { }
+            Debug.Log(m_hp);
+            Debug.Log(m_enemyPlayer.m_hp);
         }
 
         /// <summary>
@@ -141,7 +141,10 @@ namespace Game.Player
 
 
         //ダメージセット
-        public void SetDamage(int damageValue) { m_baseStatus.m_hp -= damageValue; }
+        public void SetDamage(int damageValue)
+        {
+            m_enemyPlayer.m_hp -= damageValue;
+        }
 
 
         int GetHP() { return m_baseStatus.m_hp; }

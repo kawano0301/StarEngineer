@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ManualWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55220a34a754f349bfdb9f09700aecd
+      internalID: 1375885683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_1
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd2b137f9add92479f2886048a1842c
+      internalID: 883006153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bad813ce2d3cca4fb405b2165d33ed7
+      internalID: -607333259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db14a0c59195e504daad4c11eae1e2d4
+      internalID: -2001673241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbb52a032738a742b1d9f4852f40406
+      internalID: 1801429766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9065ab39531d504586b0ce9eb0779d7
+      internalID: 1977584956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83bee5f756188040980eb1f75ebe1de
+      internalID: 2012890500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd415c146e719c7459740e1b7ab1f6a8
+      internalID: 1389342451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7431c0839b8e3624da82cdfcaac5ac33
+      internalID: 630774401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ad7504fa7e4914f91c7d5b21e119bc
+      internalID: -162641279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_10
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6809b8fc5406914478f0eaaa86d094c5
+      internalID: 1450409984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_11
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23491feaafa8a94ab37a7300f1f6139
+      internalID: 857401102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92e7299ab2ca324fa477883197be686
+      internalID: 781649578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d5f6d3de82a2c48bb4dbebd6b2fd9e
+      internalID: -32421042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_14
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b935c41bacb56847a692f6eec48b995
+      internalID: -2105863597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManualWeapon_15
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ee5efe9a5f7e64da42f0ba835b6d2f
+      internalID: 464704547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +442,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ManualWeapon_0: 1375885683
+      ManualWeapon_1: 883006153
+      ManualWeapon_10: 1450409984
+      ManualWeapon_11: 857401102
+      ManualWeapon_12: 781649578
+      ManualWeapon_13: -32421042
+      ManualWeapon_14: -2105863597
+      ManualWeapon_15: 464704547
+      ManualWeapon_2: -607333259
+      ManualWeapon_3: -2001673241
+      ManualWeapon_4: 1801429766
+      ManualWeapon_5: 1977584956
+      ManualWeapon_6: 2012890500
+      ManualWeapon_7: 1389342451
+      ManualWeapon_8: 630774401
+      ManualWeapon_9: -162641279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
