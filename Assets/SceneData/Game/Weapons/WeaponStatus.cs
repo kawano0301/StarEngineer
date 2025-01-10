@@ -8,6 +8,8 @@ namespace Game.Weapon.Status
     [Serializable]
     public class WeaponStatus
     {
+        
+
         public enum WeaponsID
         {
             FIXATION_GUN,
@@ -28,10 +30,11 @@ namespace Game.Weapon.Status
             TORNADO,            
         }
 
-        public string m_name;
-        public WeaponsID m_id;
-        public int m_damageValue;
-        public float m_coolingTime;
+        public string s_name;
+        public WeaponsID s_id;
+        public GameObject s_weaponPrefab;
+        public int s_damageValue;
+        public float s_coolingTime;
 
 
     }

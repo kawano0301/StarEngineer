@@ -11,13 +11,13 @@ namespace Game.Weapon
 
 
 
-        public override void Start(Player.Player player)
+        public override void Initialize(Player.Player player1, Player.Player player2)
         {
 
         }
 
 
-        public override void Update(Player.Player player)
+        public override void Update()
         {
             
         }
