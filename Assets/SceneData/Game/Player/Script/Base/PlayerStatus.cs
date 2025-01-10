@@ -29,7 +29,8 @@ namespace Game.Player.Status
         public float m_speedScale;
         public float m_attackScale;
         public PlanetKind m_planet;
-        public Sprite m_sprite;
+        public Sprite m_playerSprite;
+        public Sprite m_iconSprite;
         public float m_collisionRadius;
 
     }
