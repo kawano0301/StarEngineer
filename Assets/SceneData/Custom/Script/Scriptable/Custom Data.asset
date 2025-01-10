@@ -18,22 +18,22 @@ MonoBehaviour:
     st_weaponId2: 0
     st_autoId1: 0
     st_autoId2: 0
-  - st_planetKind: 0
+  - st_planetKind: 1
     st_weaponId1: 0
     st_weaponId2: 0
     st_autoId1: 0
     st_autoId2: 0
-  - st_planetKind: 0
+  - st_planetKind: 2
     st_weaponId1: 0
     st_weaponId2: 0
     st_autoId1: 0
     st_autoId2: 0
-  - st_planetKind: 0
+  - st_planetKind: 3
     st_weaponId1: 0
     st_weaponId2: 0
     st_autoId1: 0
     st_autoId2: 0
-  - st_planetKind: 0
+  - st_planetKind: 4
     st_weaponId1: 0
     st_weaponId2: 0
     st_autoId1: 0

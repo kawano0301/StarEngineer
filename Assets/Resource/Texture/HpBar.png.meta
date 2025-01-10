@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HpBar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 904
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e90d8d357dba14b8c5bfedc3663225
+      internalID: 599005167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b26e85cb5f27f4095e3e24c83821b9
+      internalID: 1834928246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 712
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2485f7efa0c1f94f88f41659464002e
+      internalID: 713384958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921ed131e5703fb4d9cdc95a29a46d6e
+      internalID: 1383922360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2eb26b6b385664bb0313535077e2ba
+      internalID: -1184418355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5175fde6d32ad56409ea82b95196bb4e
+      internalID: 15706153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpBar_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 1000
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70521dbc281948e44807906b02c1aec5
+      internalID: -1508132819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +253,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HpBar_0: 599005167
+      HpBar_1: 1834928246
+      HpBar_2: 713384958
+      HpBar_3: 1383922360
+      HpBar_4: -1184418355
+      HpBar_5: 15706153
+      HpBar_6: -1508132819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
