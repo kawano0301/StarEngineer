@@ -33,6 +33,8 @@ namespace Game.Weapon.Status
         public string s_name;
         public WeaponsID s_id;
         public GameObject s_weaponPrefab;
+        public Sprite s_icon;
+        public Sprite s_explanation;
         public int s_damageValue;
         public float s_coolingTime;
 

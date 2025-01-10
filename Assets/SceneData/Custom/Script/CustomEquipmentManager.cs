@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 public class CustomEquipmentManager : MonoBehaviour
 {
 
+    [SerializeField] WeaponScriptable m_weaponScriptable;
     [SerializeField] RectTransform m_customSelectIcon;
     [SerializeField] RectTransform[] m_customSelects;
     [SerializeField] Image[] m_nowEuipmentSprite;
@@ -18,10 +20,14 @@ public class CustomEquipmentManager : MonoBehaviour
     [SerializeField] RectTransform m_selectIcon;
     [SerializeField]
     RectTransform[] m_equipmentSelects;
-
+    [SerializeField] Image m_explanation;
+    [SerializeField] Image m_planetExplanation;
     [SerializeField]
     GameObject[] m_lineIcon;
     PlanetEquipmentData m_nowEquipmentData;
+
+
+    [SerializeField] Image[] m_weapon_autoIcons;
     int m_customSelectIndex;
 
     int m_changeEqipmentIndex;
@@ -77,10 +83,6 @@ public class CustomEquipmentManager : MonoBehaviour
     {
         m_nowEquipmentData = m_customData.m_customData[m_customSelectIndex];
         SetPlanetKind(m_nowEquipmentData.st_planetKind);
-        SetWeapon1Kind(m_nowEquipmentData.st_weaponId1);
-        SetWeapon2Kind(m_nowEquipmentData.st_weaponId2);
-        SetAuto1Kind(m_nowEquipmentData.st_autoId1);
-        SetAuto2Kind(m_nowEquipmentData.st_autoId2);
     }
 
     public void OnChangeData(int index)
@@ -128,6 +130,15 @@ public class CustomEquipmentManager : MonoBehaviour
 
         m_lineIcon[index].gameObject.SetActive(true);
 
+        if (index == (int)ChangeKind.WEAPON1 || index == (int)ChangeKind.WEAPON2)
+        {
+            for (int i = 0; i < m_weaponScriptable.s_weaponStatus.Length; i++)
+            {
+                m_weapon_autoIcons[i].sprite = m_weaponScriptable.s_weaponStatus[i].s_icon;
+            }
+        }
+
+        m_changeEqipmentIndex = index;
     }
 
     public void ApplyId()
@@ -140,20 +151,60 @@ public class CustomEquipmentManager : MonoBehaviour
         m_nowEquipmentData.st_planetKind = kind;
     }
 
-    public void SetWeapon1Kind(int kind)
+
+    public void ChangeWwaponOrAuto(int index)
     {
-        m_nowEquipmentData.st_weaponId1 = kind;
+        if (m_changeEqipmentIndex == (int)ChangeKind.WEAPON1)
+        {
+            m_nowEquipmentData.st_weaponId1 = index;
+        }
+
+        if (m_changeEqipmentIndex == (int)ChangeKind.WEAPON2)
+        {
+            m_nowEquipmentData.st_weaponId2 = index;
+
+        }
+
+        //Ž©“®‚Ìà–¾
+        if (m_changeEqipmentIndex == (int)ChangeKind.BATTLE1)
+        {
+            m_nowEquipmentData.st_autoId1 = index;
+
+        }
+
+        if (m_changeEqipmentIndex == (int)ChangeKind.BATTLE2)
+        {
+            m_nowEquipmentData.st_autoId1 = index;
+
+        }
     }
-    public void SetWeapon2Kind(int kind)
+    public void OnWeaponIcons(int index)
     {
-        m_nowEquipmentData.st_weaponId2 = kind;
+        if (m_changeEqipmentIndex == (int)ChangeKind.WEAPON1 || m_changeEqipmentIndex == (int)ChangeKind.WEAPON2)
+        {
+            m_planetExplanation.gameObject.SetActive(false);
+            m_explanation.gameObject.SetActive(true);
+            m_explanation.sprite = m_weaponScriptable.s_weaponStatus[index].s_explanation;
+        }
+        //Ž©“®‚Ìà–¾
+        else if (m_changeEqipmentIndex == (int)ChangeKind.BATTLE1 || m_changeEqipmentIndex == (int)ChangeKind.BATTLE2)
+        {
+            m_planetExplanation.gameObject.SetActive(false);
+            m_explanation.gameObject.SetActive(true);
+            //•ÏX
+            m_explanation.sprite = m_weaponScriptable.s_weaponStatus[index].s_explanation;
+        }
     }
-    public void SetAuto1Kind(int kind)
+
+    public void OnPlanetIcons(int index)
     {
-        m_nowEquipmentData.st_autoId1 = kind;
+        m_planetExplanation.gameObject.SetActive(false);
+        m_explanation.gameObject.SetActive(true);
+        ChangePlanetExplanation();
     }
-    public void SetAuto2Kind(int kind)
+
+    public void ChangePlanetExplanation()
     {
-        m_nowEquipmentData.st_autoId2 = kind;
+
     }
 }

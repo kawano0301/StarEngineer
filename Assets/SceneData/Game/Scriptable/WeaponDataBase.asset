@@ -13,51 +13,115 @@ MonoBehaviour:
   m_Name: WeaponDataBase
   m_EditorClassIdentifier: 
   s_weaponStatus:
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
+  - s_name: "\u7832\u53F0"
+    s_id: 0
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 125824311, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -22973995, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30B4\u30FC\u30EB\u30C7\u30F3\u30BD\u30FC\u30C9"
+    s_id: 1
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 2044156870, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -972340286, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u5730\u7403\u30DF\u30B5\u30A4\u30EB"
+    s_id: 2
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -757329823, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -1854051502, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u5730\u9707"
+    s_id: 3
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -501634251, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 553993443, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30C9\u30EA\u30EB\u30B7\u30E7\u30C3\u30C8"
+    s_id: 4
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 1516633719, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 386942418, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30AC\u30B9\u30C1\u30E3\u30FC\u30B8\u30B7\u30E7\u30C3\u30C8"
+    s_id: 5
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 104425602, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 386942418, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30D7\u30E9\u30BA\u30DE\u30B7\u30E7\u30C3\u30C8"
+    s_id: 6
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 1564342775, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 1414178843, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u843D\u7B2C\u843D\u3068\u3057"
+    s_id: 7
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -568608535, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -505661299, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30D6\u30FC\u30E1\u30E9\u30F3"
+    s_id: 8
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 1097478603, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -378679048, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30ED\u30C3\u30AF\u30B7\u30E7\u30C3\u30C8\u30AC\u30F3"
+    s_id: 9
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -1989546604, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 1091444357, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30C1\u30A7\u30A4\u30F3"
+    s_id: 10
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -1983384166, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -648021892, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u5730\u96F7"
+    s_id: 11
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 1219331113, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 484802410, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30B3\u30FC\u30EB\u30C9\u30B7\u30E7\u30C3\u30C8"
+    s_id: 12
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -517963800, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -2103234580, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30B3\u30FC\u30EB\u30C9\u30C0\u30C3\u30B7\u30E5"
+    s_id: 13
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 279348387, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -115115661, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u60D1\u661F\u30B9\u30E9\u30ED\u30FC\u30E0"
+    s_id: 14
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: -400998374, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: 120002228, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: "\u30C8\u30EB\u30CD\u30FC\u30C9"
+    s_id: 15
+    s_weaponPrefab: {fileID: 0}
+    s_icon: {fileID: 634838801, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
+    s_explanation: {fileID: -1638821746, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
