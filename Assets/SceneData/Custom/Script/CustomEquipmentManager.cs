@@ -18,6 +18,9 @@ public class CustomEquipmentManager : MonoBehaviour
     [SerializeField] RectTransform m_selectIcon;
     [SerializeField]
     RectTransform[] m_equipmentSelects;
+
+    [SerializeField]
+    GameObject[] m_lineIcon;
     PlanetEquipmentData m_nowEquipmentData;
     int m_customSelectIndex;
 
@@ -88,6 +91,7 @@ public class CustomEquipmentManager : MonoBehaviour
         }
         m_selectIcon.gameObject.SetActive(true);
        m_selectIcon.anchoredPosition  = m_equipmentSelects[index].anchoredPosition;
+
     }
 
     public void ChangeData(int index)
@@ -117,6 +121,12 @@ public class CustomEquipmentManager : MonoBehaviour
             default:
                 break;
         }
+        for (int i = 0; i < m_lineIcon.Length; i++)
+        {
+            m_lineIcon[i].gameObject.SetActive(false);
+        }
+
+        m_lineIcon[index].gameObject.SetActive(true);
 
     }
 
