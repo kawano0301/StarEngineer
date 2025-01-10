@@ -8,7 +8,7 @@ namespace Game.Weapon
 
     public class Weapon_07_LightningDrop : WeaponBase
     {
-        WeaponStatus m_baseStatus;
+
 
 
         public override void Start(Player.Player player)

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Game.Player.Status;
 using UnityEngine.InputSystem;
+using Game.Weapon;
 
 namespace Game.Player
 {
@@ -26,6 +27,10 @@ namespace Game.Player
             Player1,
             Player2
         }
+
+        //武器データ
+        WeaponBase m_attack1;
+        WeaponBase m_attack2;
 
         //画面外範囲と反射力
         const float SCREEN_WIDTH = 8.60f;

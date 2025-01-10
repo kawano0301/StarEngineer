@@ -8,13 +8,7 @@ namespace Game.Weapon
 
     public class WeaponBase
     {
-        WeaponStatus m_baseStatus;
-
-
-        void Initialize()
-        {
-
-        }
+        protected WeaponStatus m_baseStatus;
 
 
         public virtual void Start(Player.Player player)

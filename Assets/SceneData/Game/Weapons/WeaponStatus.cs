@@ -28,8 +28,9 @@ namespace Game.Weapon.Status
             TORNADO,            
         }
 
-        public string Name;
-        public int m_attackPower;
+        public string m_name;
+        public WeaponsID m_id;
+        public int m_damageValue;
         public float m_coolingTime;
 
 

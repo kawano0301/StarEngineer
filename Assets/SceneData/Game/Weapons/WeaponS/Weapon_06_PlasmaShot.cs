@@ -8,7 +8,7 @@ namespace Game.Weapon
 
     public class Weapon_06_PlasmaShot : WeaponBase
     {
-        WeaponStatus m_baseStatus;
+
 
 
         public override void Start(Player.Player player)

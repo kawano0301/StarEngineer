@@ -8,7 +8,7 @@ namespace Game.Weapon
 
     public class Weapon_08_Boomerang : WeaponBase
     {
-        WeaponStatus m_baseStatus;
+
 
 
         public override void Start(Player.Player player)

@@ -8,7 +8,7 @@ namespace Game.Weapon
 
     public class Weapon_12_CooldShot : WeaponBase
     {
-        WeaponStatus m_baseStatus;
+
 
 
         public override void Start(Player.Player player)
