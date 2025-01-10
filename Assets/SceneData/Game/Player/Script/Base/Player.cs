@@ -43,13 +43,16 @@ namespace Game.Player
         float m_attackScale = 1;
 
 
-        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus)
+        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus, WeaponBase attack1,WeaponBase attack2)
         {
             m_playerKind = playerKind;
             m_baseStatus = playerStatus;
             m_hp = playerStatus.m_hp;
             m_speedScale = playerStatus.m_speedScale;
             m_attackScale = playerStatus.m_attackScale;
+
+            m_attack1 = attack1;
+            m_attack2 = attack2;
 
             GetComponent<SpriteRenderer>().sprite = playerStatus.m_playerSprite;
             GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
@@ -81,14 +84,9 @@ namespace Game.Player
             MoveUpdate();
             BoundOverScreen();
 
-            if (InputManager.m_player1Shoot1) { Debug.Log("1"); }
+            if (InputManager.m_player1Shoot1) { m_attack1.Shoot(); }
 
-            if (InputManager.m_player1Shoot2) { Debug.Log("2"); }
-            SetDamage(1);
-
-
-            Debug.Log(m_hp);
-            Debug.Log(m_enemyPlayer.m_hp);
+            if (InputManager.m_player1Shoot2) { m_attack2.Shoot(); }
         }
 
         void Player2Update()
@@ -97,11 +95,9 @@ namespace Game.Player
             MoveUpdate();
             BoundOverScreen();
 
-            if (InputManager.m_player2Shoot1) { }
+            if (InputManager.m_player2Shoot1) { m_attack1.Shoot(); }
 
-            if (InputManager.m_player2Shoot2) { }
-            Debug.Log(m_hp);
-            Debug.Log(m_enemyPlayer.m_hp);
+            if (InputManager.m_player2Shoot2) { m_attack2.Shoot(); }
         }
 
         /// <summary>
@@ -150,7 +146,6 @@ namespace Game.Player
         {
             m_enemyPlayer.m_hp -= damageValue;
         }
-
 
         int GetHP() { return m_baseStatus.m_hp; }
 
