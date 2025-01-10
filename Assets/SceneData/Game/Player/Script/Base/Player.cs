@@ -35,7 +35,7 @@ namespace Game.Player
         //画面外範囲と反射力
         const float SCREEN_WIDTH = 8.60f;
         const float SCREEN_HEIGHT = 4.70f;
-        const float REBOUND_POWER = 20.0f;
+        const float REBOUND_POWER = 16.0f;
 
         //ステータス
         int m_hp = 0;
@@ -87,6 +87,10 @@ namespace Game.Player
             if (InputManager.m_player1Shoot1) { m_attack1.Shoot(); }
 
             if (InputManager.m_player1Shoot2) { m_attack2.Shoot(); }
+
+
+            BoundPlayer((Vector2)m_enemyPlayer.transform.position);
+
         }
 
         void Player2Update()
@@ -138,6 +142,14 @@ namespace Game.Player
             if (transform.position.x < -SCREEN_WIDTH) { m_velocity.x = REBOUND_POWER; }
             //下
             if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
+        }
+
+
+        void BoundPlayer(Vector2 toPlayer)
+        {
+            Vector2 length = (Vector2)transform.position - toPlayer;
+
+            m_velocity += length * REBOUND_POWER; 
         }
 
 

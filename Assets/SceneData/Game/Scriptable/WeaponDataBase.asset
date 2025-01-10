@@ -13,51 +13,83 @@ MonoBehaviour:
   m_Name: WeaponDataBase
   m_EditorClassIdentifier: 
   s_weaponStatus:
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
-  - Name: 
-    m_attackPower: 0
-    m_coolingTime: 0
+  - s_name: FixationGun
+    s_id: 0
+    s_weaponPrefab: {fileID: 5234690181225269206, guid: 6d47ef13e00a0d642850f1d8a8c99c79, type: 3}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: GoldSword
+    s_id: 1
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: Missile
+    s_id: 2
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: EarthQuake
+    s_id: 3
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: DrillShot
+    s_id: 4
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: GasChargeShot
+    s_id: 5
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: PlasmaShot
+    s_id: 6
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: LightningDrop
+    s_id: 7
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: Boomerang
+    s_id: 8
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: RockShotgun
+    s_id: 9
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: Chain
+    s_id: 10
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: LandMine
+    s_id: 11
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: CooldShot
+    s_id: 12
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: CooldDash
+    s_id: 13
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: SatelliteSlalom
+    s_id: 14
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0
+  - s_name: Tornado
+    s_id: 15
+    s_weaponPrefab: {fileID: 0}
+    s_damageValue: 0
+    s_coolingTime: 0

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AutoWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e7fb62f2b03d849aaaf63e702b0e12
+      internalID: 365813790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_1
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0a3650175bde843900ab37211c89bf
+      internalID: -982591113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8027ab153218afa468d1de551ed1fc1d
+      internalID: 1092521044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1323
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0e92211794fbf48b7356a4b4585909
+      internalID: -2112259562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc0e7f7f87c7c64c983744fe6845d3b
+      internalID: 276737435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5866f8b12cca83e4cb4235fe2f3f762a
+      internalID: -548302675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540a8c60d100ab44eb8cfc68b35684ec
+      internalID: -559388015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 882
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ec6f1ab43dff44185547c69400637c
+      internalID: -1318369540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d103d6f73ec990246b77f556a0425bb3
+      internalID: 1506316446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a5885d26704e34f886980fb687bf62
+      internalID: -1679671937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_10
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28fa256f63ca5848bb62c914001a712
+      internalID: 1853407047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_11
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 441
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefc61b1e46118e46b5683a7a02d0bb6
+      internalID: 1714464892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250efe7cef76298469550da99c113665
+      internalID: 1717395939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b8d02b75ae04a4e84c729bf49ed3db
+      internalID: -383798659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_14
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b343d390b3168ed488cea9f45bde7abf
+      internalID: 983777401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutoWeapon_15
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 0
+        width: 676
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65c0e867a073184ba4094c3cdf0efbb
+      internalID: 1223318648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +442,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AutoWeapon_0: 365813790
+      AutoWeapon_1: -982591113
+      AutoWeapon_10: 1853407047
+      AutoWeapon_11: 1714464892
+      AutoWeapon_12: 1717395939
+      AutoWeapon_13: -383798659
+      AutoWeapon_14: 983777401
+      AutoWeapon_15: 1223318648
+      AutoWeapon_2: 1092521044
+      AutoWeapon_3: -2112259562
+      AutoWeapon_4: 276737435
+      AutoWeapon_5: -548302675
+      AutoWeapon_6: -559388015
+      AutoWeapon_7: -1318369540
+      AutoWeapon_8: 1506316446
+      AutoWeapon_9: -1679671937
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

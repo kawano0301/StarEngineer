@@ -20,9 +20,11 @@ public class PlayerGenerator : MonoBehaviour
     void Start()
     {
         Player playerObject1 = InstancePlayer(Player.PlayerKind.Player1
+                                            , 1
                                             , m_player1Pos).GetComponent<Player>();
 
         Player playerObject2 = InstancePlayer(Player.PlayerKind.Player2
+                                            , 3
                                             , m_player2Pos).GetComponent<Player>();
 
         playerObject1.SetEnemyPlayer(playerObject2);
@@ -34,13 +36,9 @@ public class PlayerGenerator : MonoBehaviour
     /// <summary>
     /// プレイヤーを生成する
     /// </summary>
-    /// <param name="playerKind">操作するプレイヤー</param>
-    /// <param name="playerStatus">武器装備</param>
-    /// <param name="instancePosition">初期位置</param>
-    /// <returns></returns>
-    GameObject InstancePlayer(Player.PlayerKind playerKind, Vector3 instancePosition)
+    GameObject InstancePlayer(Player.PlayerKind playerKind,int generalCustomData, Vector3 instancePosition)
     {
-        PlanetEquipmentData planetData = m_customData.m_customData[1];
+        PlanetEquipmentData planetData = m_customData.m_customData[generalCustomData];
 
         GameObject instance = Instantiate(m_player, instancePosition, Quaternion.identity);
 
