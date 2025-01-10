@@ -42,6 +42,7 @@ public class CustomEquipmentManager : MonoBehaviour
         m_nowEquipmentData = m_customData.m_customData[0];
         m_planetIconParent.SetActive(false);
         m_weaponIconParent.SetActive(false);
+        CustomSelect(0);
     }
 
     public void SelectMotion(int index)
