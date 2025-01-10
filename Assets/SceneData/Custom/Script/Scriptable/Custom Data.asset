@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251668827d5f8c94da33455b391d5165, type: 3}
+  m_Name: Custom Data
+  m_EditorClassIdentifier: 
+  m_customData:
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
+  - st_planetKind: 0
+    st_weaponId1: 0
+    st_weaponId2: 0
+    st_autoId1: 0
+    st_autoId2: 0
