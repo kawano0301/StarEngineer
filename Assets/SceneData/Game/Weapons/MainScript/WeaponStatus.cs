@@ -8,8 +8,6 @@ namespace Game.Weapon.Status
     [Serializable]
     public class WeaponStatus
     {
-        
-
         public enum WeaponsID
         {
             FIXATION_GUN,

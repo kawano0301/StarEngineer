@@ -6,8 +6,8 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName ="Scriptable/Create Player")]
 
-public class PlayerScriptable : ScriptableObject
+public class PlanetDataBase : ScriptableObject
 {
-    public PlayerStatus[] s_player;
+    public PlayerStatus[] s_playerStatus;
 
 }
