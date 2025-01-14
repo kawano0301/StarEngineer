@@ -29,10 +29,12 @@ namespace Game.Player
 
         //移動量
         Vector2 m_velocity;
+        float m_speedDecay;
 
         //画面外範囲と反射力
-        const float SCREEN_WIDTH = 8.60f;
-        const float SCREEN_HEIGHT = 4.70f;
+        const float CENTER_Y_POINT = -1.01f;
+        const float SCREEN_WIDTH = 8.54f;
+        const float SCREEN_HEIGHT = 3.60f;
         const float REBOUND_POWER = 16.0f;
         //敵プレイヤーとの衝突距離
         const float ENEMY_MIN_LENGHT = 0.7f;
@@ -53,6 +55,7 @@ namespace Game.Player
             m_baseStatus = playerStatus;
             m_hp = playerStatus.m_hp;
             m_speedScale = playerStatus.m_speedScale;
+            m_speedDecay = playerStatus.m_speedDecay;
             m_attackScale = playerStatus.m_attackScale;
 
             m_attack1 = attack1;
@@ -137,7 +140,7 @@ namespace Game.Player
             transform.position += (Vector3)m_velocity * m_baseStatus.m_speedScale * Time.deltaTime;
 
             //速度減衰
-            m_velocity = m_velocity * 0.90f;
+            m_velocity = m_velocity * m_speedDecay;
         }
 
         /// <summary>
@@ -148,11 +151,11 @@ namespace Game.Player
             //右
             if (SCREEN_WIDTH < transform.position.x) { m_velocity.x = -REBOUND_POWER; }
             //上
-            if (SCREEN_HEIGHT < transform.position.y) { m_velocity.y = -REBOUND_POWER; }
+            if (CENTER_Y_POINT + SCREEN_HEIGHT < transform.position.y) { m_velocity.y = -REBOUND_POWER; }
             //左
             if (transform.position.x < -SCREEN_WIDTH) { m_velocity.x = REBOUND_POWER; }
             //下
-            if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
+            if (transform.position.y < CENTER_Y_POINT + -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
         }
 
         /// <summary>
@@ -162,11 +165,11 @@ namespace Game.Player
         /// <param name="collisionLength">当たり判定の距離</param>
          public void BoundPlayer(Vector2 toPlayer, float collisionLength)
         {
-            //相手との距離の計算(トリガー)
-            if (0.7f > ((Vector2)transform.position - toPlayer).magnitude)
-            {
-                Vector2 length = (Vector2)transform.position - toPlayer;
+            Vector2 length = (Vector2)transform.position - toPlayer;
 
+            //相手との距離の計算(トリガー)
+            if (collisionLength > length.magnitude)
+            {
                 m_velocity += length * REBOUND_POWER;
             }
         }
@@ -178,12 +181,17 @@ namespace Game.Player
                 case PlayerKind.NoPlayer:
                     Debug.LogError("NotFoundPlayer");
                     break;
+
                 case PlayerKind.Player1:
                     m_hp -= damageValue;
+                    if (m_hp <= 0) { m_bAlibe = false; }
                     break;
+
                 case PlayerKind.Player2:
                     m_enemyPlayer.m_hp -= damageValue;
+                    if (m_hp <= 0) { m_enemyPlayer.m_bAlibe = false; }
                     break;
+
             }
         }
 
