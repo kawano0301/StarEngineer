@@ -24,7 +24,12 @@ public class CustomEquipmentManager : MonoBehaviour
     [SerializeField] Image m_planetExplanation;
     [SerializeField]
     GameObject[] m_lineIcon;
+    [SerializeField] Image m_weaponSelectIcon;
+    [SerializeField] Image m_planetSelectIcon;
     PlanetEquipmentData m_nowEquipmentData;
+
+    [SerializeField]
+    Image[] m_planetIcons;
 
 
     [SerializeField] Image[] m_weapon_autoIcons;
@@ -149,6 +154,7 @@ public class CustomEquipmentManager : MonoBehaviour
     public void SetPlanetKind(int kind)
     {
         m_nowEquipmentData.st_planetKind = kind;
+        m_planetSelectIcon.rectTransform.anchoredPosition = m_planetIcons[kind].rectTransform.anchoredPosition;
     }
 
 
@@ -194,6 +200,7 @@ public class CustomEquipmentManager : MonoBehaviour
             //ïœçX
             m_explanation.sprite = m_weaponScriptable.s_weaponStatus[index].s_explanation;
         }
+            m_weaponSelectIcon.rectTransform.anchoredPosition = m_weapon_autoIcons[index].rectTransform.anchoredPosition;
     }
 
     public void OnPlanetIcons(int index)
