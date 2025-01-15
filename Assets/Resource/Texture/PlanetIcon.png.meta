@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_0"
+      name: PlanetIcon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91362569ade63334e8f44c7f3c3de431
-      internalID: 1601124538
+      spriteID: 242436224bf07d646819fe0e6063112b
+      internalID: 1125267030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_1"
+      name: PlanetIcon_1
       rect:
         serializedVersion: 2
         x: 120
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc46c15c064237438c36b2a6b497f3c
-      internalID: 691861605
+      spriteID: 3f7e1f04d066acf438a71c4c165d7c29
+      internalID: -38358852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_2"
+      name: PlanetIcon_2
       rect:
         serializedVersion: 2
         x: 240
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0036185dfadc74b810cd2e14e9129a
-      internalID: -991113628
+      spriteID: d0e4232008dd41946acfc8f4f91c0b21
+      internalID: 788299528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_3"
+      name: PlanetIcon_3
       rect:
         serializedVersion: 2
         x: 360
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b3671ae80a553e46a0fbe59acf32b1a
-      internalID: -2043343575
+      spriteID: ef2711218fefa0c438228f1dd5345a15
+      internalID: 521247644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_4"
+      name: PlanetIcon_4
       rect:
         serializedVersion: 2
         x: 480
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6acb0e64ac9e3eb43894e32d3677e1c7
-      internalID: 1249712904
+      spriteID: 0a077c0c3c1aef9479ef03c4e00a5673
+      internalID: -309744034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_5"
+      name: PlanetIcon_5
       rect:
         serializedVersion: 2
         x: 600
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35bd73c8d6efec249b84d9738eb377dd
-      internalID: -24072249
+      spriteID: 9414a6e710dc4184f9982a9b63f8b4ec
+      internalID: 900972105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_6"
+      name: PlanetIcon_6
       rect:
         serializedVersion: 2
         x: 720
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c231aa0750798cf4f8db762834393ff8
-      internalID: 557542561
+      spriteID: 8560b09d8f45e684798235520350b0e4
+      internalID: -1496985957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_7"
+      name: PlanetIcon_7
       rect:
         serializedVersion: 2
         x: 840
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0ff8b4eb257e804a8988da277732ac8
-      internalID: 855610029
+      spriteID: dc96e7b349b1c28489531e6d42ff9a4b
+      internalID: 1953330409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_8"
+      name: PlanetIcon_8
       rect:
         serializedVersion: 2
         x: 960
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d27a5172bf19cb4a8ea0a3fc38a48a5
-      internalID: -669814718
+      spriteID: 957dd875ca352014a93aaf80c391c6ae
+      internalID: -749317633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_9"
+      name: PlanetIcon_9
       rect:
         serializedVersion: 2
         x: 1080
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00367365ea0ad44a8a22e2293035bef
-      internalID: -1243614233
+      spriteID: 5e1285f1b4ac41b439e85201097fb5c0
+      internalID: 1227897389
       vertices: []
       indices: 
       edges: []
@@ -317,16 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_0": 1601124538
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_1": 691861605
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_2": -991113628
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_3": -2043343575
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_4": 1249712904
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_5": -24072249
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_6": 557542561
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_7": 855610029
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_8": -669814718
-      "\u60D1\u661F\u30A2\u30A4\u30B3\u30F3\uFF08\u5B8C\u6210\uFF09_9": -1243614233
+      PlanetIcon_0: 1125267030
+      PlanetIcon_1: -38358852
+      PlanetIcon_2: 788299528
+      PlanetIcon_3: 521247644
+      PlanetIcon_4: -309744034
+      PlanetIcon_5: 900972105
+      PlanetIcon_6: -1496985957
+      PlanetIcon_7: 1953330409
+      PlanetIcon_8: -749317633
+      PlanetIcon_9: 1227897389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

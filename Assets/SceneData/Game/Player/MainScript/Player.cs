@@ -13,9 +13,6 @@ namespace Game.Player
     {
         PlayerStatus m_baseStatus;
 
-        //移動量
-        Vector2 m_velocity;
-
         //相手の情報
         Player m_enemyPlayer;
 
@@ -28,22 +25,29 @@ namespace Game.Player
             Player2
         }
 
-        //武器データ
-        WeaponBase m_attack1;
-        WeaponBase m_attack2;
+        bool m_bAlibe = false;
+
+        //移動量
+        Vector2 m_velocity;
 
         //画面外範囲と反射力
         const float SCREEN_WIDTH = 8.60f;
         const float SCREEN_HEIGHT = 4.70f;
         const float REBOUND_POWER = 16.0f;
+        //敵プレイヤーとの衝突距離
+        const float ENEMY_MIN_LENGHT = 0.7f;
 
         //ステータス
         int m_hp = 0;
         float m_speedScale = 1;
         float m_attackScale = 1;
 
+        //武器データ
+        WeaponBase m_attack1;
+        WeaponBase m_attack2;
 
-        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus, WeaponBase attack1,WeaponBase attack2)
+
+        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus, WeaponBase attack1, WeaponBase attack2)
         {
             m_playerKind = playerKind;
             m_baseStatus = playerStatus;
@@ -56,6 +60,8 @@ namespace Game.Player
 
             GetComponent<SpriteRenderer>().sprite = playerStatus.m_playerSprite;
             GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
+
+            m_bAlibe = true;
         }
 
         public void SetEnemyPlayer(Player enemyPlayer) { m_enemyPlayer = enemyPlayer; }
@@ -75,21 +81,21 @@ namespace Game.Player
                     Player2Update();
                     break;
             }
-
         }
 
         void Player1Update()
         {
             SetMovePower(InputManager.m_player1Input);
             MoveUpdate();
+
             BoundOverScreen();
+            BoundPlayer((Vector2)m_enemyPlayer.transform.position
+                       , ENEMY_MIN_LENGHT);
 
             if (InputManager.m_player1Shoot1) { m_attack1.Shoot(); }
 
             if (InputManager.m_player1Shoot2) { m_attack2.Shoot(); }
 
-
-            BoundPlayer((Vector2)m_enemyPlayer.transform.position);
 
         }
 
@@ -97,15 +103,20 @@ namespace Game.Player
         {
             SetMovePower(InputManager.m_player2Input);
             MoveUpdate();
+
             BoundOverScreen();
+            BoundPlayer((Vector2)m_enemyPlayer.transform.position
+                       , ENEMY_MIN_LENGHT);
 
             if (InputManager.m_player2Shoot1) { m_attack1.Shoot(); }
 
             if (InputManager.m_player2Shoot2) { m_attack2.Shoot(); }
+
+
         }
 
         /// <summary>
-        /// 移動値セット
+        /// 移動方向と量を計算
         /// </summary>
         /// <param name="movePower">移動値</param>
         public void SetMovePower(Vector2 movePower)
@@ -118,11 +129,11 @@ namespace Game.Player
         }
 
         /// <summary>
-        /// 移動計算
+        /// 移動の適応と速度減衰
         /// </summary>
         void MoveUpdate()
         {
-            //移動計算
+            //移動適応
             transform.position += (Vector3)m_velocity * m_baseStatus.m_speedScale * Time.deltaTime;
 
             //速度減衰
@@ -130,7 +141,7 @@ namespace Game.Player
         }
 
         /// <summary>
-        /// 画面に跳ね返す移動動作
+        /// 画面内に跳ね返す反射動作
         /// </summary>
         void BoundOverScreen()
         {
@@ -144,19 +155,36 @@ namespace Game.Player
             if (transform.position.y < -SCREEN_HEIGHT) { m_velocity.y = REBOUND_POWER; }
         }
 
-
-        void BoundPlayer(Vector2 toPlayer)
+        /// <summary>
+        /// 対象と衝突した際の反射動作
+        /// </summary>
+        /// <param name="toPlayer"></param>
+        /// <param name="collisionLength">当たり判定の距離</param>
+         public void BoundPlayer(Vector2 toPlayer, float collisionLength)
         {
-            Vector2 length = (Vector2)transform.position - toPlayer;
+            //相手との距離の計算(トリガー)
+            if (0.7f > ((Vector2)transform.position - toPlayer).magnitude)
+            {
+                Vector2 length = (Vector2)transform.position - toPlayer;
 
-            m_velocity += length * REBOUND_POWER; 
+                m_velocity += length * REBOUND_POWER;
+            }
         }
 
-
-        //ダメージセット
-        public void SetDamage(int damageValue)
+        public void SetDamage(PlayerKind playerKind, int damageValue)
         {
-            m_enemyPlayer.m_hp -= damageValue;
+            switch (playerKind)
+            {
+                case PlayerKind.NoPlayer:
+                    Debug.LogError("NotFoundPlayer");
+                    break;
+                case PlayerKind.Player1:
+                    m_hp -= damageValue;
+                    break;
+                case PlayerKind.Player2:
+                    m_enemyPlayer.m_hp -= damageValue;
+                    break;
+            }
         }
 
         int GetHP() { return m_baseStatus.m_hp; }

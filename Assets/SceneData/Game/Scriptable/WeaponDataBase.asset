@@ -15,7 +15,7 @@ MonoBehaviour:
   s_weaponStatus:
   - s_name: "\u7832\u53F0"
     s_id: 0
-    s_weaponPrefab: {fileID: 0}
+    s_weaponPrefab: {fileID: 5234690181225269206, guid: 6d47ef13e00a0d642850f1d8a8c99c79, type: 3}
     s_icon: {fileID: 125824311, guid: 6e8ad6eca2f5501498fb0e5266874403, type: 3}
     s_explanation: {fileID: -22973995, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
     s_damageValue: 0

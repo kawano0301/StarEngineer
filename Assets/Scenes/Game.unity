@@ -949,10 +949,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27600329fa5abb64784cb19803e04016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_customData: {fileID: 11400000, guid: 12f96067890df3b4d9ff855f315b761b, type: 2}
-  m_weaponScriptable: {fileID: 11400000, guid: e9a1dc72b4d861e4582eda893ab84a2b, type: 2}
-  m_playerScriptable: {fileID: 11400000, guid: 49d29729dee8d2042a1c9013707363fd, type: 2}
+  m_customDataList: {fileID: 11400000, guid: 12f96067890df3b4d9ff855f315b761b, type: 2}
   m_player: {fileID: 6332171195591272376, guid: c4fceb0e11b2d764e989e93c4c4950b2, type: 3}
+  m_planetScriptable: {fileID: 11400000, guid: 49d29729dee8d2042a1c9013707363fd, type: 2}
+  m_weaponScriptable: {fileID: 11400000, guid: e9a1dc72b4d861e4582eda893ab84a2b, type: 2}
 --- !u!1 &1416190298
 GameObject:
   m_ObjectHideFlags: 0
