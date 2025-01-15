@@ -10,6 +10,7 @@ public class CustomEquipmentManager : MonoBehaviour
 {
 
     [SerializeField] WeaponScriptable m_weaponScriptable;
+    [SerializeField] PlanetDataBase m_playerScriptable;
     [SerializeField] RectTransform m_customSelectIcon;
     [SerializeField] RectTransform[] m_customSelects;
     [SerializeField] Image[] m_nowEuipmentSprite;
@@ -57,6 +58,8 @@ public class CustomEquipmentManager : MonoBehaviour
         m_planetIconParent.SetActive(false);
         m_weaponIconParent.SetActive(false);
         CustomSelect(0);
+        EquipmentDrawupdate();
+
     }
 
     public void SelectMotion(int index)
@@ -82,6 +85,8 @@ public class CustomEquipmentManager : MonoBehaviour
         m_customSelectIcon.anchoredPosition = Vector2.zero;
         m_customSelectIndex = index;
         CustomDrawUpdate();
+        EquipmentDrawupdate();
+
     }
 
     void CustomDrawUpdate()
@@ -183,7 +188,18 @@ public class CustomEquipmentManager : MonoBehaviour
             m_nowEquipmentData.st_autoId1 = index;
 
         }
+        EquipmentDrawupdate();
     }
+
+    void EquipmentDrawupdate()
+    {
+        m_nowEuipmentSprite[0].sprite = m_playerScriptable.s_playerStatus[m_nowEquipmentData.st_planetKind].m_iconSprite;
+        m_nowEuipmentSprite[1].sprite = m_weaponScriptable.s_weaponStatus[m_nowEquipmentData.st_weaponId1].s_icon;
+        m_nowEuipmentSprite[2].sprite = m_weaponScriptable.s_weaponStatus[m_nowEquipmentData.st_weaponId2].s_icon;
+        m_nowEuipmentSprite[3].sprite = m_weaponScriptable.s_autoSkillStatus[m_nowEquipmentData.st_autoId1].s_iconSprite;
+        m_nowEuipmentSprite[4].sprite = m_weaponScriptable.s_autoSkillStatus[m_nowEquipmentData.st_autoId2].s_iconSprite;
+    }
+
     public void OnWeaponIcons(int index)
     {
         if (m_changeEqipmentIndex == (int)ChangeKind.WEAPON1 || m_changeEqipmentIndex == (int)ChangeKind.WEAPON2)

@@ -125,3 +125,36 @@ MonoBehaviour:
     s_explanation: {fileID: -1638821746, guid: dd9ea040352fd0a4f9f4a41d2739796a, type: 3}
     s_damageValue: 0
     s_coolingTime: 0
+  s_autoSkillStatus:
+  - s_name: "\u30EF\u30FC\u30E0\u53EC\u559A"
+    s_iconSprite: {fileID: -1384317603, guid: 8650e2f1326b4bb4aaffb5538a090622, type: 3}
+  - s_name: "\u6DF7\u4E71\u30AC\u30B9"
+    s_iconSprite: {fileID: 1662841877, guid: 8650e2f1326b4bb4aaffb5538a090622, type: 3}
+  - s_name: "\u71B1\u6CE2"
+    s_iconSprite: {fileID: 1764965460, guid: 8650e2f1326b4bb4aaffb5538a090622, type: 3}
+  - s_name: "\u30B7\u30FC\u30EB\u30C9\u4ED8\u4E0E"
+    s_iconSprite: {fileID: -325253549, guid: 8650e2f1326b4bb4aaffb5538a090622, type: 3}
+  - s_name: "\u6FC0\u6602"
+    s_iconSprite: {fileID: -443576512, guid: 8650e2f1326b4bb4aaffb5538a090622, type: 3}
+  - s_name: "\u9054\u4EBA\u306E\u9593\u5408\u3044"
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
+  - s_name: 
+    s_iconSprite: {fileID: 0}
