@@ -40,6 +40,7 @@ namespace Game.Player
         const float ENEMY_MIN_LENGHT = 0.7f;
 
         //ステータス
+        HPView m_hpView;
         int m_hp = 0;
         float m_speedScale = 1;
         float m_attackScale = 1;
@@ -49,7 +50,11 @@ namespace Game.Player
         WeaponBase m_attack2;
 
 
-        public void Initialize(PlayerKind playerKind, PlayerStatus playerStatus, WeaponBase attack1, WeaponBase attack2)
+        public void Initialize(PlayerKind playerKind
+                             , PlayerStatus playerStatus
+                             , HPView viewHP
+                             , WeaponBase attack1
+                             , WeaponBase attack2)
         {
             m_playerKind = playerKind;
             m_baseStatus = playerStatus;
@@ -57,6 +62,8 @@ namespace Game.Player
             m_speedScale = playerStatus.m_speedScale;
             m_speedDecay = playerStatus.m_speedDecay;
             m_attackScale = playerStatus.m_attackScale;
+
+            m_hpView = viewHP;
 
             m_attack1 = attack1;
             m_attack2 = attack2;
@@ -184,11 +191,13 @@ namespace Game.Player
 
                 case PlayerKind.Player1:
                     m_hp -= damageValue;
+
                     if (m_hp <= 0) { m_bAlibe = false; }
                     break;
 
                 case PlayerKind.Player2:
                     m_enemyPlayer.m_hp -= damageValue;
+
                     if (m_hp <= 0) { m_enemyPlayer.m_bAlibe = false; }
                     break;
 

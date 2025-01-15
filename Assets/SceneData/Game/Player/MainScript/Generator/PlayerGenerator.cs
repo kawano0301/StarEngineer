@@ -10,6 +10,8 @@ public class PlayerGenerator : MonoBehaviour
 {
     [SerializeField] CustomData m_customDataList;
     [SerializeField] GameObject m_player;
+    [SerializeField] HPView m_hpViewP1;
+    [SerializeField] HPView m_hpViewP2;
     [SerializeField] PlanetDataBase m_planetScriptable;
     [SerializeField] WeaponScriptable m_weaponScriptable;
 
@@ -50,7 +52,7 @@ public class PlayerGenerator : MonoBehaviour
 
         PlayerStatus playerStatus = m_planetScriptable.s_playerStatus[customData.st_planetKind];
 
-        instance.GetComponent<Player>().Initialize(playerKind, playerStatus, weapon1, weapon2);
+        instance.GetComponent<Player>().Initialize(playerKind, playerStatus, m_hpViewP1, weapon1, weapon2);
 
         return instance;
     }
