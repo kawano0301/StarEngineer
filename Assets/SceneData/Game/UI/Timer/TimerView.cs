@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerViewControl : MonoBehaviour
+public class TimerView : MonoBehaviour
 {
     TextMeshProUGUI m_timerText;
 
@@ -18,14 +18,14 @@ public class TimerViewControl : MonoBehaviour
     private void Update()
     {
         m_timer -= Time.deltaTime;
-        TimeCounterUpdate(m_timer);
+        TimerCountUpdate(m_timer);
     }
 
     /// <summary>
     /// タイマーカウントの更新
     /// </summary>
     /// <param name="timer"></param>
-    public void TimeCounterUpdate(float timer)
+    public void TimerCountUpdate(float timer)
     {
         //引数が100以上の場合処理しない(タイマーの表記が乱れる)
         if (timer >= 100) { Debug.LogError("OverTimer"); return; }

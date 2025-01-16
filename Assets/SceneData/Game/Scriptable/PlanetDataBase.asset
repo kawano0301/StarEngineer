@@ -20,6 +20,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 2
@@ -38,6 +40,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 3
@@ -47,6 +50,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 4
@@ -56,6 +60,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 5
@@ -65,6 +70,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 6
@@ -74,6 +80,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 7
@@ -83,6 +90,7 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32
   - m_planet: 8
@@ -92,5 +100,6 @@ MonoBehaviour:
     m_hp: 100
     m_maxSpeed: 4
     m_speedScale: 1
+    m_speedDecay: 0.9
     m_attackScale: 1
     m_collisionRadius: 0.32

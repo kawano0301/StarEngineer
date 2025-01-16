@@ -29,6 +29,7 @@ namespace Game.Player.Status
         public int m_hp;
         public float m_maxSpeed;
         public float m_speedScale;
+        public float m_speedDecay;
         public float m_attackScale;
         public float m_collisionRadius;
 
