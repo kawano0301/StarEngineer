@@ -14,14 +14,11 @@ public class HPView : MonoBehaviour
     float m_decayRedGauge = 0.1f;
     int m_maxHP;
 
-    private void Start()
+    public void Initialize(float nowHP, int maxHP)
     {
         m_redGaugeHP = transform.GetChild(1).GetComponent<Image>();
         m_greenGaugeHP = transform.GetChild(2).GetComponent<Image>();
-    }
 
-    void Initialize(float nowHP, int maxHP)
-    {
         m_playerHP = nowHP;
         m_redGauge = nowHP;
         m_maxHP = maxHP;

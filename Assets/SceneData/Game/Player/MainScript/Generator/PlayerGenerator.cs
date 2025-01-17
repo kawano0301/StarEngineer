@@ -34,7 +34,6 @@ public class PlayerGenerator : MonoBehaviour
 
     }
 
-
     /// <summary>
     /// ÉvÉåÉCÉÑÅ[Çê∂ê¨Ç∑ÇÈ
     /// </summary>
@@ -52,7 +51,22 @@ public class PlayerGenerator : MonoBehaviour
 
         PlayerStatus playerStatus = m_planetScriptable.s_playerStatus[customData.st_planetKind];
 
-        instance.GetComponent<Player>().Initialize(playerKind, playerStatus, m_hpViewP1, weapon1, weapon2);
+        HPView mainView = null;
+
+        switch(playerKind)
+        {
+            case Player.PlayerKind.NoPlayer:
+                Debug.LogError("NotFoundPlayer");
+                break;
+            case Player.PlayerKind.Player1:
+                mainView = m_hpViewP1;
+                break;
+            case Player.PlayerKind.Player2:
+                mainView = m_hpViewP2;
+                break;
+        }
+
+        instance.GetComponent<Player>().Initialize(playerKind, playerStatus, mainView, weapon1, weapon2);
 
         return instance;
     }

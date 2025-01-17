@@ -25,7 +25,7 @@ namespace Game.Player
             Player2
         }
 
-        bool m_bAlibe = false;
+        bool m_bAlive = false;
 
         //ˆÚ“®—Ê
         Vector2 m_velocity;
@@ -64,6 +64,7 @@ namespace Game.Player
             m_attackScale = playerStatus.m_attackScale;
 
             m_hpView = viewHP;
+            m_hpView.Initialize(m_hp, m_baseStatus.m_maxHP);
 
             m_attack1 = attack1;
             m_attack2 = attack2;
@@ -71,7 +72,7 @@ namespace Game.Player
             GetComponent<SpriteRenderer>().sprite = playerStatus.m_playerSprite;
             GetComponent<CircleCollider2D>().radius = playerStatus.m_collisionRadius;
 
-            m_bAlibe = true;
+            m_bAlive = true;
         }
 
         public void SetEnemyPlayer(Player enemyPlayer) { m_enemyPlayer = enemyPlayer; }
@@ -85,9 +86,11 @@ namespace Game.Player
                     Debug.LogError("NoControlPlayer");
                     break;
                 case PlayerKind.Player1:
+                    if (!m_bAlive) break;
                     Player1Update();
                     break;
                 case PlayerKind.Player2:
+                    if (!m_bAlive) break;
                     Player2Update();
                     break;
             }
@@ -106,7 +109,6 @@ namespace Game.Player
 
             if (InputManager.m_player1Shoot2) { m_attack2.Shoot(); }
 
-
         }
 
         void Player2Update()
@@ -121,7 +123,6 @@ namespace Game.Player
             if (InputManager.m_player2Shoot1) { m_attack1.Shoot(); }
 
             if (InputManager.m_player2Shoot2) { m_attack2.Shoot(); }
-
 
         }
 
@@ -170,7 +171,7 @@ namespace Game.Player
         /// </summary>
         /// <param name="toPlayer"></param>
         /// <param name="collisionLength">“–‚½‚è”»’è‚Ì‹——£</param>
-         public void BoundPlayer(Vector2 toPlayer, float collisionLength)
+        public void BoundPlayer(Vector2 toPlayer, float collisionLength)
         {
             Vector2 length = (Vector2)transform.position - toPlayer;
 
@@ -181,30 +182,16 @@ namespace Game.Player
             }
         }
 
-        public void SetDamage(PlayerKind playerKind, int damageValue)
+        public void SetDamage(int damageValue)
         {
-            switch (playerKind)
-            {
-                case PlayerKind.NoPlayer:
-                    Debug.LogError("NotFoundPlayer");
-                    break;
+            m_hp -= damageValue;
 
-                case PlayerKind.Player1:
-                    m_hp -= damageValue;
+            if (m_hpView != null) { m_hpView.HPViewControl(m_hp); }
 
-                    if (m_hp <= 0) { m_bAlibe = false; }
-                    break;
-
-                case PlayerKind.Player2:
-                    m_enemyPlayer.m_hp -= damageValue;
-
-                    if (m_hp <= 0) { m_enemyPlayer.m_bAlibe = false; }
-                    break;
-
-            }
+            if (m_hp <= 0) { m_bAlive = false; }
         }
 
-        int GetHP() { return m_baseStatus.m_hp; }
+        int GetHP() { return m_hp; }
 
     }
 }
